@@ -14,13 +14,13 @@ let information = [
 export default function Account() {
    function Info({text}) {
       return(
-         <a href="#" class="border-2 border-lightgray bg-inherit text-black text-xl inline rounded-lg px-3 py-4">Your {text}</a>
+         <a href="#" className="border-2 border-lightgray bg-inherit text-black text-xl inline rounded-lg px-3 py-4">Your {text}</a>
          )
       }
     return (   
       <>
-         <div class="mb-5 overflow-scroll whitespace-nowrap">
-            <div class="text-black px-3.5 flex justify-start gap-2 w-min">
+         <div className="mb-5 overflow-scroll whitespace-nowrap">
+            <div className="text-black px-3.5 flex justify-start gap-2 w-min">
                {information.map(i => 
                   <Info text={i.info}/>
                   )}
@@ -36,16 +36,16 @@ export default function Account() {
 // function Button({text}){
 //    return (
 //       for(let i=0; i < 3;i++) {
-//          <a href="#" class=" border-2 border-lightgray bg-inherit text-black text-xl inline rounded-lg px-3 py-4">Your {text}</a>
+//          <a href="#" className=" border-2 border-lightgray bg-inherit text-black text-xl inline rounded-lg px-3 py-4">Your {text}</a>
 //       }
 //    )
 // }
 
-         // <div class="mb-5 overflow-scroll whitespace-nowrap">
-         //    <div class="text-black px-3.5 flex justify-start gap-2 w-min">
-         //    <a href="#" class="border-2 border-lightgray bg-inherit text-black text-xl inline rounded-lg px-3 py-4">Your Payments</a>
-         //    <a href="#" class="border-2 border-lightgray bg-inherit text-black text-xl inline rounded-lg px-3 py-4">Your Subscribers</a>
-         //    <a href="#" class=" border-2 border-lightgray bg-inherit text-black text-xl inline rounded-lg px-3 py-4">Your Subscribers</a>
+         // <div className="mb-5 overflow-scroll whitespace-nowrap">
+         //    <div className="text-black px-3.5 flex justify-start gap-2 w-min">
+         //    <a href="#" className="border-2 border-lightgray bg-inherit text-black text-xl inline rounded-lg px-3 py-4">Your Payments</a>
+         //    <a href="#" className="border-2 border-lightgray bg-inherit text-black text-xl inline rounded-lg px-3 py-4">Your Subscribers</a>
+         //    <a href="#" className=" border-2 border-lightgray bg-inherit text-black text-xl inline rounded-lg px-3 py-4">Your Subscribers</a>
          //    </div>
          // </div>
 

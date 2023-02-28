@@ -8,8 +8,8 @@ let numbers = [
 
 export default function Serving() {
     return (
-    <div class={"flex items-center"}>
-        <p class="ml-2 text-sm">Qty:</p>
+    <div className={"flex items-center"}>
+        <p className="ml-2 text-sm">Qty:</p>
         <div >
         <select name="numbers">
         {numbers.map(i =>

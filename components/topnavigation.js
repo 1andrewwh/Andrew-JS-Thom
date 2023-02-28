@@ -20,13 +20,13 @@ export default function Top() {
 
 
 // How make svgs link?
-// <div class="bg-white sticky right-0 top-0 left-0 ">
-// <div class="flex flex-row justify-between px-5">
+// <div className="bg-white sticky right-0 top-0 left-0 ">
+// <div className="flex flex-row justify-between px-5">
 
 
 
-// <img class="mt-[32]" src="/meals.svg"/>
-// <img class="mt-[40]" src="/x.svg"/>
+// <img className="mt-[32]" src="/meals.svg"/>
+// <img className="mt-[40]" src="/x.svg"/>
 // </div>
-// <div class="p-px bg-darkgreen mt-4"></div>
+// <div className="p-px bg-darkgreen mt-4"></div>
 // </div>

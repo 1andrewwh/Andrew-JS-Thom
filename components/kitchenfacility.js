@@ -12,7 +12,7 @@ let kitchen = [
 export default function KitchenFacility({title, location, dist, info, ratings}) {
     function Kitchens({image}) {
        return(
-            <Image 
+            <Image alt=""
             src={image}
             width={160}
             height={111}
@@ -21,25 +21,25 @@ export default function KitchenFacility({title, location, dist, info, ratings}) 
        }
      return (   
         <>
-            <p class="text-2xl text-black ml-3.5 font-bold">{title}</p>
+            <p className="text-2xl text-black ml-3.5 font-bold">{title}</p>
 
 
-            <div class="flex items-center whitespace-nowrap mt-[10] mb-1">
-            <p class="text-teal-700 text-base ml-3.5 ">{location}</p>
-            <p class="text-base ml-2 text-gray-500">{dist} mi</p>
+            <div className="flex items-center whitespace-nowrap mt-[10] mb-1">
+            <p className="text-teal-700 text-base ml-3.5 ">{location}</p>
+            <p className="text-base ml-2 text-gray-500">{dist} mi</p>
             <div>
-            <img class="ml-[58]" src="/stars.svg"/>
+            <img className="ml-[58]" src="/stars.svg"/>
             </div>
             </div>
 
 
-            <div class="flex justify-between ml-3.5 items-center" >
-            <p class="text-gray-500 text-base">{info}</p>
-            <p class="text-teal-700 text-base mr-3.5">({ratings})</p>
+            <div className="flex justify-between ml-3.5 items-center" >
+            <p className="text-gray-500 text-base">{info}</p>
+            <p className="text-teal-700 text-base mr-3.5">({ratings})</p>
             </div>
 
-            <div class="mt-2 overflow-scroll">
-                <div class="mx-3.5 flex gap-2">
+            <div className="mt-2 overflow-scroll">
+                <div className="mx-3.5 flex gap-2">
                     {kitchen.map(i =>     
                     <Kitchens image={i.spot}/>
                     )}
@@ -52,7 +52,7 @@ export default function KitchenFacility({title, location, dist, info, ratings}) 
 // export default function KitchenFacility({title, location, dist, info, ratings}) {
 //     function Kitchens({image}) {
 //         return (
-//                 <Image 
+//                 <Image alt=""
 //                 src={image}
 //                 width={160}
 //                 height={111}
@@ -62,26 +62,26 @@ export default function KitchenFacility({title, location, dist, info, ratings}) 
 
 //     return (
 //         <>
-//             <p class="text-2xl text-black ml-3.5 font-bold">{title}</p>
+//             <p className="text-2xl text-black ml-3.5 font-bold">{title}</p>
 
 
-//             <div class="flex items-center whitespace-nowrap mt-[10] mb-1">
-//             <p class="text-teal-700 text-base ml-3.5 ">{location}</p>
-//             <p class="text-base ml-2 text-gray-500">{dist} mi</p>
+//             <div className="flex items-center whitespace-nowrap mt-[10] mb-1">
+//             <p className="text-teal-700 text-base ml-3.5 ">{location}</p>
+//             <p className="text-base ml-2 text-gray-500">{dist} mi</p>
 //             <div>
-//             <img class="ml-[58]" src="/stars.svg"/>
+//             <img className="ml-[58]" src="/stars.svg"/>
 //             </div>
 //             </div>
 
 
-//             <div class="flex justify-between ml-3.5 items-center" >
-//             <p class="text-gray-500 text-base">{info}</p>
-//             <p class="text-teal-700 text-base mr-3.5">({ratings})</p>
+//             <div className="flex justify-between ml-3.5 items-center" >
+//             <p className="text-gray-500 text-base">{info}</p>
+//             <p className="text-teal-700 text-base mr-3.5">({ratings})</p>
 //             </div>
 
 
-//             <div class= "mt-2 overflow-scroll whitespace-nowrap">
-//             <div class="mx-3.5 flex justify-start gap-2.5">
+//             <div className= "mt-2 overflow-scroll whitespace-nowrap">
+//             <div className="mx-3.5 flex justify-start gap-2.5">
 //             {/* <Image
 //             src={image}
 //             width={160}
@@ -100,13 +100,13 @@ export default function KitchenFacility({title, location, dist, info, ratings}) 
 
 
 // How make svgs link?
-// <div class="bg-white sticky right-0 top-0 left-0 ">
-// <div class="flex flex-row justify-between px-5">
+// <div className="bg-white sticky right-0 top-0 left-0 ">
+// <div className="flex flex-row justify-between px-5">
 
 
 
-// <img class="mt-[32]" src="/meals.svg"/>
-// <img class="mt-[40]" src="/x.svg"/>
+// <img className="mt-[32]" src="/meals.svg"/>
+// <img className="mt-[40]" src="/x.svg"/>
 // </div>
-// <div class="p-px bg-darkgreen mt-4"></div>
+// <div className="p-px bg-darkgreen mt-4"></div>
 // </div>
