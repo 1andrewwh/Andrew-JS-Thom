@@ -6,10 +6,10 @@ let numbers = [
     {number: "5"},
   ]
 
-export default function Serving() {
+export default function Quantity() {
     return (
-    <div className={"flex items-center"}>
-        <p className="ml-2 text-sm">Qty:</p>
+    <div class={"flex items-center"}>
+        <p class="ml-2 text-sm">Qty:</p>
         <div >
         <select name="numbers">
         {numbers.map(i =>
@@ -22,4 +22,4 @@ export default function Serving() {
  }
 
  
-
+//  class="py-2 bg-gray-100 w-[39] rounded-2xl text-sm h-[22px] items-center gap-1 border border-gray-300"

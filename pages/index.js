@@ -48,7 +48,7 @@ let facility = [{
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>Create Next App</title>
       </Head>
@@ -78,6 +78,6 @@ export default function Home() {
       <Bot />
       </main>
  
-    </div>
+    </>
   )
 }

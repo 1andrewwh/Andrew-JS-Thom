@@ -6,26 +6,33 @@ let kitchen = [
     {spot: "/facility1.jpg"},
     {spot: "/facility2.jpg"},
     {spot: "/facility3.jpg"},
+    {spot: "/facility4.jpg"},
     {spot: "/facility4.jpg"}
+
   ]
 
 export default function KitchenFacility({title, location, dist, info, ratings}) {
     function Kitchens({image}) {
        return(
-            <Image alt=""
-            src={image}
-            width={160}
-            height={111}
-            />
+            <div className="w-[160px] h-[111px] relative">
+                <Image alt=""
+                src={image}
+                width={160}
+                height={111}
+                className="min-w-[160px]"
+                // layout="fill"
+                objectFit="contain" 
+                />
+            </div>
           )
        }
      return (   
         <>
-            <p className="text-2xl text-black ml-3.5 font-bold">{title}</p>
+            <p className="text-2xl text-black font-bold">{title}</p>
 
 
             <div className="flex items-center whitespace-nowrap mt-[10] mb-1">
-            <p className="text-teal-700 text-base ml-3.5 ">{location}</p>
+            <p className="text-teal-700 text-base">{location}</p>
             <p className="text-base ml-2 text-gray-500">{dist} mi</p>
             <div>
             <img className="ml-[58]" src="/stars.svg"/>
@@ -33,13 +40,13 @@ export default function KitchenFacility({title, location, dist, info, ratings}) 
             </div>
 
 
-            <div className="flex justify-between ml-3.5 items-center" >
+            <div className="flex justify-between items-center" >
             <p className="text-gray-500 text-base">{info}</p>
             <p className="text-teal-700 text-base mr-3.5">({ratings})</p>
             </div>
 
             <div className="mt-2 overflow-scroll">
-                <div className="mx-3.5 flex gap-2">
+                <div className="flex gap-2">
                     {kitchen.map(i =>     
                     <Kitchens image={i.spot}/>
                     )}
