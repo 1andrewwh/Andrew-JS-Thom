@@ -2,16 +2,16 @@ import {useState} from "react"
 import Image from "next/image"
 import Link from "next/link"
 
-export default function Top() {
+export default function Top({link}) {
     return (
         <>
             <div className="relative z-10 pt-6 bg-white sticky right-0 top-0 left-0 ">
                 <div className="flex flex-row justify-between px-5">
-                    <img className="mt-[40]" src="/barrow.svg"/>
-                    <img className="mt-[32]" src="/amazonmeals.svg"/>
+                    <Link href={link}><img className="mt-[40]" src="/barrow.svg"/></Link>
+                    <Link href="/"><img className="mt-[32]" src="/amazonmeals.svg"/></Link>
                     <img className="mt-[40]" src="/x.svg"/>
                 </div>
-                <div className="p-px bg-darkgreen mt-4"></div>
+                <div className="p-px bg-[#86BA40] mt-4"></div>
             </div>  
         </>
 

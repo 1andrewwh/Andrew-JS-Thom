@@ -15,7 +15,7 @@ export default function KitchenFacility({title, location, dist, info, ratings}) 
     function Kitchens({image}) {
        return(
             <div className="w-[160px] h-[111px] relative">
-                <Image alt=""
+                <Image alt="Kitchen Facility"
                 src={image}
                 width={160}
                 height={111}
