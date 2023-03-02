@@ -36,7 +36,7 @@ export default function Security() {
 
             <div class="p-px bg-gray-200 mb-3"></div>
 
-            <Input text="Routing" />
+            <Input info="Routing" />
             <Input 
                 info="Account"
                 message="Your account and routing number 

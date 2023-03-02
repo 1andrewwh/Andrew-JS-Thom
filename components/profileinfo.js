@@ -1,5 +1,6 @@
 import {useState} from "react"
 import Image from "next/image"
+import Link from "next/link"
 
 
 
@@ -42,8 +43,8 @@ export default function Profile({view, viewinfo, camera, profileimg, name, rate,
       <p class="ml-[117px] text-[24px] mt-2 mb-[28px]">Chef {name}</p>
 
      <div class="flex gap-2 items-center">
-        <a href="#" class="bg-yellow-300 drop-shadow-sm py-[11px] px-[12px] rounded-md text-[13px]">{rate}</a>
-        <a href="#" class="bg-white drop-shadow-sm py-[10px] px-3 rounded-md text-[13px] border border-gray-200">{edit}</a>
+        <Link href="#" class="bg-yellow-300 drop-shadow-sm py-[11px] px-[12px] rounded-md text-[13px]">{rate}</Link>
+        <Link href="#" class="bg-white drop-shadow-sm py-[10px] px-3 rounded-md text-[13px] border border-gray-200">{edit}</Link>
      </div>
 
 

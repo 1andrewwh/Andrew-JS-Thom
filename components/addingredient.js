@@ -7,6 +7,12 @@ import Quantity from '../components/quantity'
 
 export default function Ingredient({image, title, ratings, cost, costperlb, qty}) {
     const [selectedQty, setSelectedQty] = useState(1)
+    let total = cost*selectedQty
+    let total_dollar = Math.trunc(total)
+    let total_cents = total - total_dollar
+    total_cents = String(total_cents.toFixed(2)).slice(-2)
+    let perlb = (((total)/selectedQty).toFixed(2)/3)
+
     return (
     <>
         <div className="mb-2 flex justify-start border border-gray-100">
@@ -27,10 +33,10 @@ export default function Ingredient({image, title, ratings, cost, costperlb, qty}
             <div className="flex items-center gap-1">
                 <div className="ml-2 flex inline items-start">
                     <p className="pt-0.5 text-sm">$</p>
-                    <p className="text-2xl">{cost*selectedQty}</p>
-                    <p className="pt-0.5 text-sm">99</p>
+                    <p className="text-2xl">{total_dollar}</p>
+                    <p className="pt-0.5 text-sm">{total_cents}</p>
                 </div>
-                <p className="mt-0.5 text-sm font-light">(${costperlb}/lb)</p>
+                <p className="mt-0.5 text-sm font-light">(${perlb}/lb)</p>
             </div>
             <div className="flex gap-2">
                 {/* <Quantity/> */}

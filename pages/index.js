@@ -51,8 +51,8 @@ let chefinfo = {
 let ingredient = {
   title: "Yellow Onions, 3 lbs ",
   ratings: "6498",
-  cost: "11",
-  costperlb: "3.22",
+  cost: "3.99",
+  costperlb: "1.33",
   qty: "2" 
 }
 
