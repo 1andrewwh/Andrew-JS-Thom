@@ -19,9 +19,8 @@ export default function KitchenFacility({title, location, dist, info, ratings}) 
                 src={image}
                 width={160}
                 height={111}
-                className="min-w-[160px]"
+                className="min-w-[160px] object-contain"
                 // layout="fill"
-                objectFit="contain" 
                 />
             </div>
           )

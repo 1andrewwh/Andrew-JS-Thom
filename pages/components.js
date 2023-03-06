@@ -78,7 +78,6 @@ export default function Home() {
 
       <main>
         <Top link="/chef-private" />
-
         <Profile 
           view={userinfo.view}
           viewinfo={userinfo.viewinfo}
@@ -89,7 +88,6 @@ export default function Home() {
           edit={userinfo.edit}
         />
 
-        <div className='mx-5'>
         <Bio balance={chefinfo.balance}
           cooks={chefinfo.cooks}
           subscribers={chefinfo.subscribers}
@@ -98,10 +96,9 @@ export default function Home() {
           bio={chefinfo.bio}
         />
 
-        <div className='flex flex-col gap-3 my-3'>
-          <ActionButton text="Payout Settings" link="#" size="large" style='secondary'/>
-          <ActionButton text="Switch Profiles" link="#" size="large" style='tertiary'/>
-        </div>
+        <ProfileButton text="Payout Settings"/>
+
+        <ProfileButton text="Switch Profiles"/>
 
         <Ingredient 
           image="/yellowonions.jpg" 
@@ -122,11 +119,9 @@ export default function Home() {
 
         <Input info="Social Security"/>
 
-        <div className='flex flex-col gap-3 my-3'>
-          <ActionButton text="Name your Kitchen" link="/security" size="large" style='primary'/>
-          <ActionButton text="Confirm" link="/chef-private" size="large" style='secondar-alt'/>
-        </div>
-        {/* <YellowButton text="Confirm" link="/chef-private"/> */}
+        <ActionButton text="Name your Kitchen" link="/security" />
+
+        <YellowButton text="Confirm" link="/chef-private"/>
 
         <Account/>
         
@@ -137,7 +132,6 @@ export default function Home() {
           info={facility.info} 
           ratings={facility.ratings}
         />
-        </div>
 
         <Bot />
 

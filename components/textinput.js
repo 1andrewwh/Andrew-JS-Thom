@@ -11,6 +11,6 @@ export default function Input({info, message}) {
                 <img className="absolute right-7 mt-4 items-center"src="/questions.svg"/>
             </div>
         </div> 
-        <p className="text-sm">{message}</p>
+       {message && <p className="text-sm">{message}</p>}
     </>
 )}

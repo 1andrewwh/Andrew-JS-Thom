@@ -2,6 +2,8 @@ import {useState} from "react"
 import Image from "next/image"
 import Link from "next/link"
 
+import ActionButton from "./Button"
+
 
 
   
@@ -10,6 +12,7 @@ export default function Profile({view, viewinfo, camera, profileimg, name, rate,
     return (   
     <>
           <div class="relative">
+
         <a href="chef-public.html" class="items-center text-[13px] w-screen h-[33px] bg-orange-400 flex gap-1">
             <p class="ml-[11px]">{view}</p>
             <p class="text-blue">{viewinfo}</p>
@@ -25,12 +28,12 @@ export default function Profile({view, viewinfo, camera, profileimg, name, rate,
     </div>
 
          <div class="absolute z-10 bg-white w-[112px] h-[112px] mt-[-50px] rounded-full flex items-center justify-center">
-            <div class="w-[100px] h-[100px] rounded-full bg-gray-300 "></div>
+            {/* <div class="w-[100px] h-[100px] rounded-full bg-gray-300 "></div> */}
             <Image
                 src={profileimg}
                 width={100}
                 height={100}
-                className="absolute mt-[-14]"
+                className="absolute mt-[-14] bg-gray-300 w-[100px] h-[100px] rounded-full"
             />
             <Image 
                 src={camera}
@@ -42,9 +45,10 @@ export default function Profile({view, viewinfo, camera, profileimg, name, rate,
 
       <p class="ml-[117px] text-[24px] mt-2 mb-[28px]">Chef {name}</p>
 
-     <div class="flex gap-2 items-center">
-        <Link href="#" class="bg-yellow-300 drop-shadow-sm py-[11px] px-[12px] rounded-md text-[13px]">{rate}</Link>
-        <Link href="#" class="bg-white drop-shadow-sm py-[10px] px-3 rounded-md text-[13px] border border-gray-200">{edit}</Link>
+     <div class="flex gap-2 items-center mx-5">     
+        <ActionButton text={rate} link="#" size="small" style='secondary'/>
+        <ActionButton text={edit} link="#" size="small" style='tertiary'/>
+
      </div>
 
 

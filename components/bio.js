@@ -14,11 +14,11 @@ export default function Bio({ balance, cooks, subscribers, meals, title, bio}) {
 <p>Subscribers {subscribers} • Meals {meals}</p>
 </div>
 
-<div class="bg-gray-300 h-1.5 w-screen mt-[19px]"></div>
+<div class="bg-gray-300 h-1.5 mt-[19px] -mx-5"></div>
 <p class="mt-[19px] font-bold text-[22px]">{title}</p>
 <p>{bio}</p>
 
-<div class="bg-gray-300 h-1 w-screen mt-[18px]"></div>
+<div class="bg-gray-300 h-1 mt-[18px] -mx-5"></div>
 
 
 

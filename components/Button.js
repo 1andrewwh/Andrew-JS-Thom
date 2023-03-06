@@ -1,24 +1,37 @@
 import {useState} from "react"
 import Link from 'next/link';
 
-export default function ActionButton({link, text}) {
+export default function ActionButton({link, text, size, outline, style}) {
     const [isActive, setIsActive] = useState(false)
 
     function activeHandler() {
         setIsActive(!isActive)
     }
 
+    let btnSize = size == 'large' ? 'p-4 text-xl rounded-lg border-2' : 'text-sm px-3 py-2.5 rounded-md border';
+    let btnStyle;
+    switch(style) {
+        case 'primary':
+            btnStyle = 'bg-orange-400 border-orange-400'
+            break;
+        case 'secondary':
+            btnStyle = 'bg-yellow-300 border-yellow-300'
+            break;
+        case 'secondary-alt':
+            btnStyle = 'bg-white border-yellow-300'
+            break;
+        case 'tertiary':
+            btnStyle = 'bg-white border-gray-200';
+            break;
+    }
+
     return (
     <Link href={link}>
-    <button 
+    <div 
         onClick={()=>activeHandler()} 
-        className={`w-full mt-2.5 text-black text-[20px] block text-center rounded-lg p-4 border-2 mb-4 
-        ${!isActive ? 
-            'bg-orange-400 border-orange-400' : 
-            'bg-white border-gray-300'} 
-    `}>
+        className={`text-black text-center  ${btnSize} ${btnStyle}`}>
        {text}
-    </button>
+    </div>
     </Link>
     )
 }
